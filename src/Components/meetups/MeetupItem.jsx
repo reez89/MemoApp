@@ -4,11 +4,7 @@ import Card from '../UI/Card'
 import FavoritesContext from '../../store/favorites-context'
 
 function MeetupItem(props) {
-    const favoriteContext = React.createContext(FavoritesContext);
-
-
-
-    const favoritesCtx = useContext(favoriteContext);
+    const favoritesCtx = useContext(FavoritesContext);
     const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);
 
     function toggleFavoriteStatusHandler() {
